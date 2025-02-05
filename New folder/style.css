@@ -1,0 +1,145 @@
+/* General Reset */
+body, h1, h2, p, a, table, th, td, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: rgb(74, 6, 6);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #981d1d;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    display: inline-block;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #b6d625;
+    border-radius: 5px;
+}
+
+/* Container Styling */
+.container {
+    padding: 2rem;
+}
+
+.dashboard h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.stat h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Table Section */
+.table-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h2 {
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #b4ce58;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #71db40;
+}
+
+tbody tr:hover {
+    background-color: #6fa548;
+}
+
+/* Buttons */
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.add {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.edit {
+    background-color: #007BFF;
+    color: white;
+}
+
+button.delete {
+    background-color: #E53935;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}

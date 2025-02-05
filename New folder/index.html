@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+   
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <nav>
+        
+        <a href="Products.html" id="productsLink">Products</a>
+        <a href="Billing.html" id="productsLink">Billing</a>
+        <a href="Reports.html" id="reportsLink">Reports</a>
+    </nav>
+
+    <div class="container">
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="section">
+            <h1>Dashboard</h1>
+            <div class="stats">
+                <div class="stat">
+                    <h2 id="totalProducts">0</h2>
+                    <p>Total Products</p>
+                </div>
+                <div class="stat">
+                    <h2 id="lowStockItems">0</h2>
+                    <p>Low Stock Items</p>
+                </div>
+                <div class="stat">
+                    <h2 id="totalSuppliers">0</h2>
+                    <p>Suppliers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div id="products" class="section hidden">
+            <h1>Products</h1>
+            <div class="controls">
+                <button class="btn add" id="addProductBtn">Add Product</button>
+                <input type="text" id="searchProduct" placeholder="Search Products">
+            </div>
+            <div id="qrScanner" class="hidden">
+                <h2>Scan Product QR Code</h2>
+                <div id="reader"></div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                        <!-- Dynamic rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Reports Section -->
+        <div id="reports" class="section hidden">
+            <h1>Reports</h1>
+            <canvas id="categoryChart" width="40" height="20"></canvas>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalTitle">Add Product</h2>
+            <form id="productForm">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" required>
+                
+                <label for="productCategory">Category:</label>
+                <input type="text" id="productCategory" name="productCategory" required>
+                
+                <label for="productStock">Stock:</label>
+                <input type="number" id="productStock" name="productStock" required>
+                
+                <label for="productPrice">Price:</label>
+                <input type="number" step="0.01" id="productPrice" name="productPrice" required>
+                
+                <button type="submit" class="btn save">Save</button>
+                <button type="button" class="btn cancel" id="cancelBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

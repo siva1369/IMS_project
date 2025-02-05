@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <nav>
+       
+        <a href="Home.html" id="HomeLink">Home</a>
+        <a href="Products.html" id="productsLink">Products</a>
+        <a href="Reports.html" id="reportsLink">Reports</a>
+        
+    </nav>
+
+    <div class="container">
+        <!-- Other Sections -->
+        <div id="billing" class="section hidden">
+            <h1>Billing</h1>
+            <div class="billing-controls">
+                <select id="productSelector"></select>
+                <button id="addToBillBtn" class="btn add">Add to Bill</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="billingTableBody"></tbody>
+                </table>
+            </div>
+            <div class="billing-summary">
+                <h2>Total: $<span id="billingTotal">0.00</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
